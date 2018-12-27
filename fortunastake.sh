@@ -51,7 +51,7 @@ make -f makefile.unix
 sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Populate denarius.conf"
-sudo mkdir ~/.denarius
+mkdir ~/.denarius
     # Get VPS IP Address
     VPSIP=$(curl ipinfo.io/ip)
     # create rpc user and password
