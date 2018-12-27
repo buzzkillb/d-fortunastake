@@ -70,20 +70,10 @@ rm -rf database txleveldb smsgDB
 wget http://d.hashbag.cc/chaindata.zip
 unzip chaindata.zip
 
-echo "Add Start Daemon on Reboot Cronjob"
-rebootcommand="/usr/local/bin/denariusd"
-rebootjob="@reboot $rebootcommand"
-cat <(fgrep -i -v "$rebootcommand" <(crontab -l)) <(echo "$rebootjob") | crontab -
-
-echo "Add Stop Daemon every hour Cronjob"
-stopcommand="/usr/local/bin/denariusd stop"
-stopjob="0 * * * * $stopcommand"
-cat <(fgrep -i -v "$stopcommand" <(crontab -l)) <(echo "$stopjob") | crontab -
-
-echo "Add Start Daemon every hour Cronjob"
-startcommand="/usr/local/bin/denariusd"
-startjob="2 * * * * $startcommand"
-cat <(fgrep -i -v "$startcommand" <(crontab -l)) <(echo "$startjob") | crontab -
+echo "Add Daemon Cronjob"
+(crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
+(crontab -l ; echo "0 * * * * /usr/local/bin/denariusd stop")| crontab -
+(crontab -l ; echo "2 * * * * /usr/local/bin/denariusd")| crontab -
 
 echo "Starting Denarius Daemon"
 sudo denariusd
