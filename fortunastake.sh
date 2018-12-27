@@ -86,4 +86,4 @@ echo "Starting Denarius Daemon"
 sudo denariusd
 
 echo "Watch getinfo for block sync"
-watch -n .1 'denariusd getinfo'
+watch -n 10 'denariusd getinfo'
