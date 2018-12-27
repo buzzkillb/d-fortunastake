@@ -41,7 +41,8 @@ sudo apt-get --assume-yes install git unzip build-essential libssl-dev libdb++-d
 echo "Installing Denarius Wallet"
 git clone https://github.com/carsenk/denarius
 cd denarius
-git checkout master
+git checkout v3.4
+git pull
 cd src
 make -f makefile.unix
 sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
