@@ -76,7 +76,7 @@ echo "Add Daemon Cronjob"
 (crontab -l ; echo "2 * * * * /usr/local/bin/denariusd")| crontab -
 
 echo "Starting Denarius Daemon"
-sudo denariusd
+denariusd
 
 echo "Watch getinfo for block sync"
 watch -n 10 'denariusd getinfo'
