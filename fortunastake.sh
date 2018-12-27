@@ -4,7 +4,10 @@ echo "Updating linux packages"
 sudo apt-get update -y && apt-get upgrade -y
 
 echo "Installing git"
-apt install git -y
+sudo apt install git -y
+
+echo "Installing curl"
+sudo apt-get install curl -y
 
 echo "Intalling fail2ban"
 sudo apt install fail2ban -y
@@ -21,7 +24,7 @@ ufw logging on
 ufw --force enable
 
 echo "Installing PWGEN"
-apt-get install -y pwgen
+sudo apt-get install -y pwgen
 
 echo "Installing 2G Swapfile"
 sudo fallocate -l 2G /swapfile
@@ -61,7 +64,7 @@ sudo mkdir ~/.denarius
 
 
 echo "Get Chaindata"
-apt-get -y install unzip
+sudo apt-get -y install unzip
 cd ~/.denarius
 rm -rf database txleveldb smsgDB
 wget http://d.hashbag.cc/chaindata.zip
