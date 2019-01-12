@@ -4,7 +4,7 @@
 Testing with menu  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fs.sh)"```  
 
-Install Denarius FortunaStake
+Install Denarius FortunaStake  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fortunastake.sh)"```
 
 Update FortunaStake to Latest wallet  
