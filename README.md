@@ -1,9 +1,13 @@
 ![FortunaStake](https://i.imgur.com/ZO4lDWT.png)
 # Denarius FortunaStake
 
+Testing with menu  
+```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fs.sh)"```  
+
+Install Denarius FortunaStake
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fortunastake.sh)"```
 
-To Update to Latest wallet  
+Update FortunaStake to Latest wallet  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/update.sh)"```
 
 To modify cronjob  
