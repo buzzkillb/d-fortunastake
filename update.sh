@@ -12,4 +12,4 @@ sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Start denariusd"
 denariusd
-watch -n .1 './denariusd getinfo'
+watch -n 10 'denariusd getinfo'
