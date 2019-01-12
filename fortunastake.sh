@@ -72,8 +72,8 @@ unzip chaindata.zip
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
-(crontab -l ; echo "0 * * * * /usr/local/bin/denariusd stop")| crontab -
-(crontab -l ; echo "2 * * * * /usr/local/bin/denariusd")| crontab -
+#(crontab -l ; echo "0 * * * * /usr/local/bin/denariusd stop")| crontab -
+#(crontab -l ; echo "2 * * * * /usr/local/bin/denariusd")| crontab -
 
 echo "Starting Denarius Daemon"
 denariusd
