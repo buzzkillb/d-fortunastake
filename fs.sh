@@ -48,7 +48,7 @@ sudo apt-get --assume-yes install git unzip build-essential libssl-dev libdb++-d
 echo "Installing Denarius Wallet"
 git clone https://github.com/carsenk/denarius
 cd denarius
-git checkout v3.4
+git checkout master
 git pull
 cd src
 make -f makefile.unix
@@ -90,7 +90,7 @@ echo "Stop denariusd"
 denariusd stop
 
 cd denarius
-git checkout v3.4
+git checkout master
 git pull
 cd src
 make -f makefile.unix
