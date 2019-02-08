@@ -82,6 +82,7 @@ sleep 120
 
 echo "Stopping Denarius Daemon to put Onion Address into denarius.conf"
 denariusd stop
+sleep 30
 
 ONIONADDRESS=$(head -1 ~/.denarius/onion/hostname)
 echo "externalip=$ONIONADDRESS:9999" >> ~/.denarius/denarius.conf
