@@ -48,7 +48,7 @@ git checkout master
 git pull
 cd src
 make -f makefile.unix
-sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
+mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Populate denarius.conf"
 mkdir ~/.denarius
