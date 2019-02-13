@@ -4,10 +4,10 @@
 Menu version. Choose Ubuntu 16.04, Ubuntu 18.04, or update to latest daemon.  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fs.sh)"```  
 
-Install Denarius FortunaStake  
+Install Denarius FortunaStake Ubuntu 16.04  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fortunastake.sh)"```  
 
-Install Denarius FortunaStake Native TOR Enabled  
+Install Denarius FortunaStake Native TOR Enabled Ubuntu 16.04  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fortunastaketor.sh)"```  
 ```cat ~/.denarius/onion/hostname``` to get onion address from command line  
 
