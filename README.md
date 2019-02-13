@@ -1,7 +1,7 @@
 ![FortunaStake](https://i.imgur.com/ZO4lDWT.png)
 # Denarius FortunaStake
 
-Testing with menu  
+Menu version. Choose Ubuntu 16.04, Ubuntu 18.04, or update to latest daemon.  
 ```bash -c "$(wget -O - https://raw.githubusercontent.com/buzzkillb/d-fortunastake/master/fs.sh)"```  
 
 Install Denarius FortunaStake  
