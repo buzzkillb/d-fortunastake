@@ -52,7 +52,7 @@ git checkout master
 git pull
 cd src
 make -f makefile.unix
-mv ~/denarius/src/denariusd /usr/local/bin/denariusd
+sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Populate denarius.conf"
 mkdir ~/.denarius
@@ -147,7 +147,7 @@ git checkout master
 git pull
 cd src
 OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f makefile.unix
-mv ~/denarius/src/denariusd /usr/local/bin/denariusd
+sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Populate denarius.conf"
 mkdir ~/.denarius
