@@ -5,7 +5,7 @@ choice=`cat $TEMP`
 case $choice in
         1)      echo 1 "Installing Denarius FortunaStake Ubuntu 16.04"
 echo "Updating linux packages"
-sudo apt-get update -y && apt-get upgrade -y
+sudo apt-get update -y sudo && apt-get upgrade -y
 
 echo "Installing git"
 sudo apt install git -y
@@ -18,14 +18,14 @@ sudo apt install fail2ban -y
 
 echo "Installing Firewall"
 sudo apt install ufw -y
-ufw default allow outgoing
-ufw default deny incoming
-ufw allow ssh/tcp
-ufw limit ssh/tcp
-ufw allow 33369/tcp
-ufw allow 9999/tcp
-ufw logging on
-ufw --force enable
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+sudo ufw allow ssh/tcp
+sudo ufw limit ssh/tcp
+sudo ufw allow 33369/tcp
+sudo ufw allow 9999/tcp
+sudo ufw logging on
+sudo ufw --force enable
 
 echo "Installing PWGEN"
 sudo apt-get install -y pwgen
