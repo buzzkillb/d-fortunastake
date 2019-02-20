@@ -1,6 +1,6 @@
 #!/bin/sh
 TEMP=/tmp/answer$$
-whiptail --title "Denarius [D]"  --menu  "FortunaStake :" 20 0 0 1 "Install Denarius FortunaStake Ubuntu 16.04" 2 "Install Denarius FortunaStake Ubuntu 18.04" 3 "Update Denarius FortunaStake" 4 "Watch denariusd getinfo <ctrl+c> to exit" 2>$TEMP
+whiptail --title "Denarius [D]"  --menu  "FortunaStake :" 20 0 0 1 "Install Denarius FortunaStake Ubuntu 16.04" 2 "Install Denarius FortunaStake Ubuntu 18.04" 3 "Update Denarius FortunaStake Ubuntu 16.04" 4 "Watch denariusd getinfo <ctrl+c> to exit" 2>$TEMP
 choice=`cat $TEMP`
 case $choice in
         1)      echo 1 "Installing Denarius FortunaStake Ubuntu 16.04"
@@ -191,7 +191,7 @@ git checkout master
 git pull
 cd src
 make -f makefile.unix
-mv ~/denarius/src/denariusd /usr/local/bin/denariusd
+sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Start denariusd"
 denariusd
