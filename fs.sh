@@ -89,7 +89,7 @@ watch -n 10 'denariusd getinfo'
                 ;;
         2)      echo 2 "Installing Denarius FortunaStake Ubuntu 18.04"
 echo "Updating linux packages"
-sudo apt-get update -y && apt-get upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 echo "Installing git"
 sudo apt install git -y
