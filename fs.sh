@@ -5,7 +5,7 @@ choice=`cat $TEMP`
 case $choice in
         1)      echo 1 "Installing Denarius FortunaStake Ubuntu 16.04"
 echo "Updating linux packages"
-sudo apt-get update -y sudo && apt-get upgrade -y
+sudo apt-get update -y sudo && sudo apt-get upgrade -y
 
 echo "Installing git"
 sudo apt install git -y
