@@ -38,7 +38,7 @@ sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 echo "Installing Dependencies"
-sudo apt-get --assume-yes install git unzip build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool
+sudo apt-get install -y git unzip build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool
 
 #echo "Downloading Denarius Wallet"
 #wget https://github.com/carsenk/denarius/releases/download/v3.2.5/denariusd-v3.2.5-ubuntu1604.tar.gz
@@ -122,16 +122,16 @@ sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 echo "Installing Dependencies"
-sudo apt-get --assume-yes install git unzip build-essential libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool
+sudo apt-get install -y git unzip build-essential libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool
 
 echo "Downgrade libssl-dev"
 sudo apt-get install make
 wget https://www.openssl.org/source/openssl-1.0.1j.tar.gz
 tar -xzvf openssl-1.0.1j.tar.gz
 cd openssl-1.0.1j
-sudo ./config
-sudo make depend
-sudo make
+./config
+make depend
+make
 sudo make install
 sudo ln -sf /usr/local/ssl/bin/openssl `which openssl`
 cd ~
