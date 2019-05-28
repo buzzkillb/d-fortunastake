@@ -77,7 +77,7 @@ wget https://github.com/carsenk/denarius/releases/download/v3.3.7/chaindata17995
 unzip chaindata1799510.zip
 
 echo "Get Peers.dat"
-wget https://github.com/buzzkillb/denarius-qt/releases/download/3.3.9p/peers.dat
+wget https://github.com/carsenk/denarius/releases/download/v3.3.7/peers.dat
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
