@@ -48,10 +48,11 @@ sudo apt-get install -y git unzip build-essential libssl-dev libdb++-dev libboos
 echo "Installing Denarius Wallet"
 git clone https://github.com/carsenk/denarius
 cd denarius
-git checkout v3.4
-git pull
+#git checkout v3.4
+#git pull
 cd src
 make -f makefile.unix
+strip denariusd
 sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Populate denarius.conf"
@@ -73,8 +74,8 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://github.com/carsenk/denarius/releases/download/v3.3.7/chaindata1799510.zip
-unzip chaindata1799510.zip
+wget https://github.com/carsenk/denarius/releases/download/v3.3.9.1/chaindata2022527.zip
+unzip chaindata2022527.zip
 
 echo "Get Peers.dat"
 wget https://github.com/carsenk/denarius/releases/download/v3.3.7/peers.dat
@@ -148,10 +149,11 @@ openssl version -v
 echo "Installing Denarius Wallet"
 git clone https://github.com/carsenk/denarius
 cd denarius
-git checkout v3.4
-git pull
+#git checkout v3.4
+#git pull
 cd src
 OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f makefile.unix
+strip denariusd
 sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Populate denarius.conf"
@@ -173,8 +175,8 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://github.com/carsenk/denarius/releases/download/v3.3.7/chaindata1799510.zip
-unzip chaindata1799510.zip
+wget https://github.com/carsenk/denarius/releases/download/v3.3.9.1/chaindata2022527.zip
+unzip chaindata2022527.zip
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
@@ -196,6 +198,7 @@ git checkout master
 git pull
 cd src
 make -f makefile.unix
+strip denariusd
 sudo mv ~/denarius/src/denariusd /usr/local/bin/denariusd
 
 echo "Start denariusd"
