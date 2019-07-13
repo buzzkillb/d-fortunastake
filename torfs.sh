@@ -56,7 +56,7 @@ echo "Grab Onion Address"
 cd ~
 sudo service tor restart
 sudo cat /var/lib/tor/hidden_service01/hostname > ~/onion.txt
-ONION=$(cat onion.txt)
+ONION=$(head -1 onion.txt)
 echo "$ONION"
 
 #echo "Downloading Denarius Wallet"
