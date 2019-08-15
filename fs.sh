@@ -194,7 +194,7 @@ echo "Stop denariusd"
 denariusd stop
 
 cd denarius
-git checkout master
+git checkout v3.4
 git pull
 cd src
 make -f makefile.unix
