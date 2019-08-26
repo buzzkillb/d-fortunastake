@@ -74,11 +74,11 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://github.com/carsenk/denarius/releases/download/v3.3.9.1/chaindata2022527.zip
-unzip chaindata2022527.zip
+wget https://gitlab.com/denarius/chain/raw/master/chaindata2290877.zip
+unzip chaindata2290877.zip
 
-echo "Get Peers.dat"
-wget https://github.com/carsenk/denarius/releases/download/v3.3.7/peers.dat
+#echo "Get Peers.dat"
+#wget https://github.com/carsenk/denarius/releases/download/v3.3.7/peers.dat
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
@@ -175,8 +175,8 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://github.com/carsenk/denarius/releases/download/v3.3.9.1/chaindata2022527.zip
-unzip chaindata2022527.zip
+wget https://gitlab.com/denarius/chain/raw/master/chaindata2290877.zip
+unzip chaindata2290877.zip
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
