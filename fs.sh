@@ -77,8 +77,8 @@ rm -rf database txleveldb smsgDB
 wget https://gitlab.com/denarius/chain/raw/master/chaindata2290877.zip
 unzip chaindata2290877.zip
 
-#echo "Get Peers.dat"
-#wget https://github.com/carsenk/denarius/releases/download/v3.3.7/peers.dat
+echo "Get Peers.dat"
+wget https://github.com/buzzkillb/d-fortunastake/blob/master/peers.dat
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
