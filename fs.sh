@@ -38,7 +38,7 @@ sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 echo "Installing Dependencies"
-sudo apt-get install -y git unzip build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool
+sudo apt-get install -y git unzip build-essential libssl-dev libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool libcurl4-openssl-dev
 
 #echo "Downloading Denarius Wallet"
 #wget https://github.com/carsenk/denarius/releases/download/v3.2.5/denariusd-v3.2.5-ubuntu1604.tar.gz
@@ -49,7 +49,7 @@ echo "Installing Denarius Wallet"
 git clone https://github.com/carsenk/denarius
 cd denarius
 git pull
-git checkout v3.4
+git checkout master
 git pull
 cd src
 make -f makefile.unix
@@ -75,11 +75,12 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://gitlab.com/denarius/chain/raw/master/chaindata2290877.zip
-unzip chaindata2290877.zip
+wget https://pos.watch/chaindata.zip
+unzip chaindata.zip
+rm chaindata.zip
 
-echo "Get Peers.dat"
-wget https://github.com/buzzkillb/d-fortunastake/blob/master/peers.dat
+#echo "Get Peers.dat"
+#wget https://github.com/buzzkillb/d-fortunastake/blob/master/peers.dat
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
@@ -127,7 +128,7 @@ sudo swapon /swapfile
 echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
 
 echo "Installing Dependencies"
-sudo apt-get install -y git unzip build-essential libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool
+sudo apt-get install -y git unzip build-essential libdb++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev libgmp-dev libevent-dev autogen automake  libtool libcurl4-openssl-dev
 
 echo "Downgrade libssl-dev"
 sudo apt-get install make
@@ -151,7 +152,7 @@ echo "Installing Denarius Wallet"
 git clone https://github.com/carsenk/denarius
 cd denarius
 git pull
-git checkout v3.4
+git checkout master
 git pull
 cd src
 OPENSSL_INCLUDE_PATH=/usr/local/ssl/include OPENSSL_LIB_PATH=/usr/local/ssl/lib make -f makefile.unix
@@ -177,8 +178,9 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://gitlab.com/denarius/chain/raw/master/chaindata2290877.zip
-unzip chaindata2290877.zip
+wget https://pos.watch/chaindata.zip
+unzip chaindata.zip
+rm chaindata.zip
 
 echo "Add Daemon Cronjob"
 (crontab -l ; echo "@reboot /usr/local/bin/denariusd")| crontab -
@@ -197,7 +199,7 @@ denariusd stop
 
 cd denarius
 git pull
-git checkout v3.4
+git checkout master
 git pull
 cd src
 make -f makefile.unix
