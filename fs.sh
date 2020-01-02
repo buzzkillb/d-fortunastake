@@ -18,8 +18,8 @@ sudo apt install fail2ban -y
 
 echo "Installing Firewall"
 sudo apt install ufw -y
-sudo ufw default allow outgoing
 sudo ufw default deny incoming
+sudo ufw default allow outgoing
 sudo ufw allow ssh/tcp
 sudo ufw limit ssh/tcp
 sudo ufw allow 33369/tcp
@@ -108,8 +108,8 @@ sudo apt install fail2ban -y
 
 echo "Installing Firewall"
 sudo apt install ufw -y
-sudo ufw default allow outgoing
 sudo ufw default deny incoming
+sudo ufw default allow outgoing
 sudo ufw allow ssh/tcp
 sudo ufw limit ssh/tcp
 sudo ufw allow 33369/tcp
