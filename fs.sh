@@ -75,7 +75,7 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://chaindata.pos.watch/chaindata.zip
+wget https://denarii.cloud/chaindata.zip
 unzip chaindata.zip
 rm chaindata.zip
 
@@ -178,7 +178,7 @@ cd ~/.denarius
 rm -rf database txleveldb smsgDB
 #wget http://d.hashbag.cc/chaindata.zip
 #unzip chaindata.zip
-wget https://chaindata.pos.watch/chaindata.zip
+wget https://denarii.cloud/chaindata.zip
 unzip chaindata.zip
 rm chaindata.zip
 
